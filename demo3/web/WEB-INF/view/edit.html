@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改士兵信息</title>
+</head>
+<body>
+
+
+      <table>
+        <form th:action="@{soldier(method='updateSoldierById')}", method="post">
+        <tr>
+          <td>士兵编号</td>
+          <td><input type="text" th:value="${soldier.soldierId}"  name="soldierId"  readonly="readonly"></td>
+        </tr>
+        <tr>
+          <td>士兵姓名</td>
+          <td><input type="text" th:value="${soldier.soldierName}" name="soldierName" ></td>
+        </tr>
+        <tr>
+          <td>士兵武器</td>
+          <td><input type="text" th:value="${soldier.soldierWeapon}" name="soldierWeapon" ></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="修改"></td>
+        </tr>
+        </form>
+      </table>
+
+
+
+</body>
+</html>
